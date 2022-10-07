@@ -1,0 +1,62 @@
+<div class="dialog dialog--medium feedback bg-white radius-7 overflow-hidden">
+    <div class="feedback__head relative bg-dark py-7 px-5 px-md-3">
+        <div class="feedback__bg absolute width-100 height-100 overflow-hidden">
+            <div class="feedback__line feedback__line--1 line line--1"></div>
+            <div class="feedback__line feedback__line--2 line line--2"></div>
+            <div class="feedback__line feedback__line--3 line line--3"></div>
+            <div class="feedback__line feedback__line--4 line line--4"></div>
+            <div class="feedback__line feedback__line--5 line line--5"></div>
+        </div>
+        <div class="feedback__content flex flex-direction-column relative width-100 mx-auto">
+            <h1 class="font-alt text text--center text-36 text-md-22 bold-8 color-white interval-1 mb-2">Отправьте заявку</h1>
+            <h2 class="font-alt text text--center text-18 text-md-16 bold-4 color-white">Я перезвоню и проконсультирую вас бесплатно</h2>
+        </div>
+    </div>
+    <div class="feedback__body py-7 px-5 px-md-3">
+        <form class="feedback__content flex flex-direction-column width-100 mx-auto -validate-form-">
+            <label class="flex flex-direction-column mb-5 -validate-label-">
+                <span class="text-18 text-md-16 bold-6 mb-3">Ваше имя</span>
+                <div class="cover">
+                    <input class="input -validate-input- -input-name-" type="text" name="name">
+                    <span class="error anim anim--fade -validate-error-">Пожалуйста, введите ваше имя!</span>
+                </div>
+            </label>
+            <label class="flex flex-direction-column mb-10 -validate-label-">
+                <span class="text-18 text-md-16 bold-6 mb-3">Ваш телефон</span>
+                <div class="cover">
+                    <input class="input -validate-input- -input-tel-" type="tel" name="tel" placeholder="+7 (">
+                    <span class="error anim anim--fade -validate-error-">Пожалуйста, введите ваш номер!</span>
+                </div>
+            </label>
+            <button class="btn btn--second btn--fill radius-2 py-3 px-8 mb-10 mb-md-5 -waved-" type="submit">Отправить</button>
+            <span class="link link--underline text text--center text-14 bold-4 fade-60 width-max width-md-100 mx-auto" data-fancybox-modal data-type="ajax" data-src="dialogs/dialog-politics.html">
+                Отправляя форму Вы даете согласие на обработку <br class="display-md-none">
+                Ваших персональных данных
+            </span>
+        </form>
+    </div>
+    
+    <!-- <form class="flex flex-direction-column width-100 -validate-form-">
+        <label class="flex flex-direction-column mb-5 -validate-label-">
+            <span class="text-20 mb-3">Telephone</span>
+            <div class="cover">
+                <input class="input -validate-input- -input-tel-" type="tel" name="tel" placeholder="+7 (">
+                <span class="error anim anim--fade -validate-error-">Пожалуйста, введите ваш номер!</span>
+            </div>
+        </label>
+        <label class="flex flex-direction-column mb-5 -validate-label-">
+            <span class="text-20 mb-3">Password</span>
+            <div class="cover">
+                <input class="input pr-10 -validate-input- -input-password-" type="password" placeholder="Your password here" autocomplete="off" name="password">
+                <span class="error anim anim--fade -validate-error-">Пожалуйста, введите пароль!</span>
+                <span class="cover__img cover__img--eye text-20 color-black cursor -eye-">
+                    <svg class="icon">
+                        <use xlink:href="img/icons.svg#eye-visible" />
+                    </svg>
+                </span>
+            </div>
+        </label>
+        <button class="btn btn--second btn--fill py-3 radius-2 px-4 mb-5 -waved-" type="submit">Enter</button>
+        <div class="link text-18 color-second width-max mx-auto" data-fancybox-modal data-type="ajax" data-src="dialogs/dialog-politics.html">Privacy policy</div>
+    </form> -->
+</div>

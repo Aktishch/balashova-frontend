@@ -1,0 +1,20 @@
+<svg width="48" height="42" viewBox="0 0 48 42" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M6 0C2.68629 0 0 2.68629 0 6C0 9.31371 2.68629 12 6 12H42C45.3137 12 48 9.31371 48 6C48 2.68629 45.3137 0 42 0H6Z" fill="#353535"/>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M3 15H45V36C45 39.3137 42.3137 42 39 42H9C5.68629 42 3 39.3137 3 36V15ZM18 24C18 22.3431 19.3431 21 21 21H27C28.6569 21 30 22.3431 30 24C30 25.6569 28.6569 27 27 27H21C19.3431 27 18 25.6569 18 24Z" fill="#353535"/>
+<mask id="mask0_261_517" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="48" height="42">
+<path d="M6 0C2.68629 0 0 2.68629 0 6C0 9.31371 2.68629 12 6 12H42C45.3137 12 48 9.31371 48 6C48 2.68629 45.3137 0 42 0H6Z" fill="#111827"/>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M3 15H45V36C45 39.3137 42.3137 42 39 42H9C5.68629 42 3 39.3137 3 36V15ZM18 24C18 22.3431 19.3431 21 21 21H27C28.6569 21 30 22.3431 30 24C30 25.6569 28.6569 27 27 27H21C19.3431 27 18 25.6569 18 24Z" fill="#111827"/>
+</mask>
+<g mask="url(#mask0_261_517)">
+<g filter="url(#filter0_f_261_517)">
+<circle cx="23" cy="-1" r="40" fill="#066A34"/>
+</g>
+</g>
+<defs>
+<filter id="filter0_f_261_517" x="-67" y="-91" width="180" height="180" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+<feFlood flood-opacity="0" result="BackgroundImageFix"/>
+<feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"/>
+<feGaussianBlur stdDeviation="25" result="effect1_foregroundBlur_261_517"/>
+</filter>
+</defs>
+</svg>

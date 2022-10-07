@@ -1,0 +1,19 @@
+// Скролл
+html {
+    scrollbar: {
+        width: thin;
+        color: var(--color-grey) var(--color-green);
+    }
+
+    &::-webkit-scrollbar {
+        width: var(--size-3);
+    }
+
+    &::-webkit-scrollbar-track {
+        background-color: var(--color-green);
+    }
+
+    &::-webkit-scrollbar-thumb {
+        background-color: var(--color-primary);
+    }
+}

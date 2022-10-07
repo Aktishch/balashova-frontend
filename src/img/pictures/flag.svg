@@ -1,0 +1,23 @@
+<svg width="48" height="36" viewBox="0 0 48 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M48 27C48 31.9705 45.4702 36 40.5 36H7.5C2.52975 36 0 31.9705 0 27V9C0 4.02955 2.52975 0 7.5 0H40.5C45.4702 0 48 4.02955 48 9V27Z" fill="#353535"/>
+<mask id="mask0_261_462" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="48" height="36">
+<path d="M48 27C48 31.9705 45.4702 36 40.5 36H7.5C2.52975 36 0 31.9705 0 27V9C0 4.02955 2.52975 0 7.5 0H40.5C45.4702 0 48 4.02955 48 9V27Z" fill="#1F1F1F"/>
+</mask>
+<g mask="url(#mask0_261_462)">
+<g filter="url(#filter0_f_261_462)">
+<circle cx="23" cy="-7" r="40" fill="#066A34"/>
+</g>
+</g>
+<path d="M9.72755 6.49219L11.3318 9.75019L14.928 10.2714L12.3278 12.8027L12.9405 16.3877L9.72755 14.6964L6.5138 16.3877L7.1273 12.8027L4.5293 10.2714L8.11955 9.75019L9.72755 6.49219Z" fill="white"/>
+<path d="M15.3793 3.74609L15.824 4.64984L16.8245 4.79459L16.1023 5.49884L16.271 6.49259L15.3793 6.02309L14.4883 6.49259L14.657 5.49884L13.9355 4.79459L14.9338 4.64984L15.3793 3.74609Z" fill="white"/>
+<path d="M18.2672 6.99609L18.7127 7.89909L19.7087 8.04459L18.9895 8.75034L19.159 9.74259L18.2672 9.27384L17.3762 9.74259L17.545 8.75034L16.8242 8.04459L17.821 7.89909L18.2672 6.99609Z" fill="white"/>
+<path d="M18.2672 12.2129L18.7127 13.1181L19.7087 13.2629L18.9895 13.9671L19.159 14.9609L18.2672 14.4929L17.3762 14.9609L17.545 13.9671L16.8242 13.2629L17.821 13.1181L18.2672 12.2129Z" fill="white"/>
+<path d="M15.3793 15.8779L15.824 16.7817L16.8245 16.9257L16.1023 17.6292L16.271 18.6244L15.3793 18.1579L14.4883 18.6244L14.657 17.6292L13.9355 16.9257L14.9338 16.7817L15.3793 15.8779Z" fill="white"/>
+<defs>
+<filter id="filter0_f_261_462" x="-67" y="-97" width="180" height="180" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+<feFlood flood-opacity="0" result="BackgroundImageFix"/>
+<feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"/>
+<feGaussianBlur stdDeviation="25" result="effect1_foregroundBlur_261_462"/>
+</filter>
+</defs>
+</svg>

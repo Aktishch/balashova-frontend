@@ -1,0 +1,79 @@
+// Fancybox
+.fancybox__content {
+    padding   : 0;
+    background: none;
+    max-width : 100%;
+
+    & :focus:not(.carousel__button.is-close) {
+        outline: none;
+    }
+
+    &>.carousel__button.is-close {
+        top             : var(--size-2);
+        right           : var(--size-2);
+        color           : var(--color-black);
+        background-color: var(--color-white);
+    }
+
+    @media(max-width: $tablet) {
+        &>.carousel__button.is-close {
+            position  : fixed;
+            box-shadow: 0 var(--size-1) var(--size-2) var(--color-black-10);
+        }
+    }
+}
+
+// Slider-swiper
+.swiper {
+    margin : calc(-1 * var(--size-4));
+    padding: var(--size-4);
+
+    &-pagination {
+        display        : flex;
+        align-items    : center;
+        justify-content: center;
+        position       : static;
+
+        &-bullet {
+            width           : var(--size-3);
+            height          : var(--size-3);
+            background-color: currentColor;
+        }
+    }
+
+    &-button {
+
+        &-prev {
+            left: calc(-1 * var(--size-10));
+        }
+
+        &-next {
+            right: calc(-1 * var(--size-10));
+        }
+
+        &-prev,
+        &-next {
+            width     : 44px;
+            height    : 44px;
+            position  : absolute;
+            box-shadow: 0 var(--size-1) var(--size-4) var(--color-black-10);
+
+            &::after {
+                display: none;
+            }
+        }
+    }
+
+    @media(max-width: $laptop) {
+        &-button {
+
+            &-prev {
+                left: 0;
+            }
+
+            &-next {
+                right: 0;
+            }
+        }
+    }
+}

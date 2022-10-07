@@ -1,0 +1,43 @@
+// Карточка
+.card {
+    display         : flex;
+    flex-direction  : column;
+    position        : relative;
+    background-color: var(--color-white);
+    box-shadow      : 0 var(--size-1) var(--size-2) var(--color-black-10);
+    border-radius   : var(--size-2);
+    overflow        : hidden;
+    cursor          : pointer;
+
+    transition: {
+        duration       : 0.2s;
+        timing-function: ease;
+    }
+
+    &::after {
+        content         : '';
+        position        : absolute;
+        top             : 0;
+        right           : 0;
+        bottom          : 0;
+        background-color: var(--color-grey);
+        width           : 140px;
+        height          : 100%;
+        transform       : skew(-30deg) translateX(20px);
+    }
+
+    &-content {
+        display        : flex;
+        align-items    : center;
+        justify-content: space-between;
+        flex-grow      : 1;
+        position       : relative;
+        z-index        : var(--z-1);
+    }
+
+    @media(hover) {
+        &:hover {
+            box-shadow: var(--size-2) var(--size-2) var(--size-1) var(--color-black-30);
+        }
+    }
+}

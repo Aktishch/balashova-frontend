@@ -1,0 +1,17 @@
+// Модальные окна
+.dialog {
+    color    : var(--color-black);
+    max-width: 100%;
+
+    &--small {
+        width: 425px;
+    }
+
+    &--medium {
+        width: 600px;
+    }
+
+    &--large {
+        width: 1200px;
+    }
+}

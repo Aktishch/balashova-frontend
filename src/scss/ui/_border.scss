@@ -1,0 +1,57 @@
+// Рамка
+.border {
+    border: {
+        width: 1px;
+        style: solid;
+        color: var(--color-gray);
+    }
+
+    &-top {
+        border-top: {
+            width: 1px;
+            style: solid;
+            color: var(--color-gray);
+        }
+    }
+
+    &-left {
+        border-left: {
+            width: 1px;
+            style: solid;
+            color: var(--color-gray);
+        }
+    }
+
+    &-right {
+        border-right: {
+            width: 1px;
+            style: solid;
+            color: var(--color-gray);
+        }
+    }
+
+    &-bottom {
+        border-bottom: {
+            width: 1px;
+            style: solid;
+            color: var(--color-gray);
+        }
+    }
+
+    &-none {
+        border: none;
+    }
+}
+
+// Радиус
+.radius {
+    @for $i from 1 through 10 {
+        &-#{$i} {
+            border-radius: var(--size-#{$i});
+        }
+    }
+
+    &-max {
+        border-radius: 50%;
+    }
+}

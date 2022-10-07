@@ -1,0 +1,1136 @@
+    <% var data = {
+
+        title: 'katerina-balashova.ru',
+        status: true
+
+    } %>
+
+    <%= _.template(require('./includes/header.html').default)({data}) %>
+
+    <!-- Директор -->
+    <section class="director container flex align-items-center relative bg-dark radius-9 m-4 m-tb-0">
+        <div class="director__bg absolute overflow-hidden width-100 height-100">
+            <div class="line line--1"></div>
+            <div class="line line--2"></div>
+            <div class="line line--3"></div>
+            <div class="line line--4"></div>
+            <div class="line line--5"></div>
+            <div class="director__picture width-100 absolute duration-5 anim anim--left -elem-">
+                <picture>
+                    <source srcset="img/pictures/director.webp" type="image/webp">
+                    <img class="width-100 relative z-1" src="img/pictures/director.png" alt="">
+                </picture>
+            </div>
+        </div>
+        <div class="director__content relative z-1 flex flex-direction-column relative">
+            <h2 class="font-alt text-28 text-lg-20 text-md-16 text-shadow bold-7 color-white anim anim--right -elem-">Ваш директор по ВЭД на аутсорсе</h2>
+            <h1 class="font-alt text-50 text-lg-40 text-md-28 text-shadow bold-8 color-white interval-1 mb-9 mb-lg-5 mb-md-3 delay-2 anim anim--right -elem-">Катерина Балашова</h1>
+            <div class="flex flex-direction-column gap-5 gap-md-3 mb-6 mb-md-10">
+                <div class="flex align-items-center delay-3 anim anim--right -elem-">
+                    <img class="icon text-36 text-md-24 mr-3" src="img/pictures/nameplate-1.svg" alt="">
+                    <span class="text-shadow text-18 text-md-14 bold-4 color-white interval-4 mr-3">
+                        руководитель регионального отделения <br class="display-md-none">
+                        РАСПП в Краснодарском крае
+                    </span>
+                </div>
+                <div class="flex align-items-center delay-4 anim anim--right -elem-">
+                    <img class="icon text-36 text-md-24 mr-3" src="img/pictures/nameplate-2.svg" alt="">
+                    <span class="text-shadow text-18 text-md-14 bold-4 color-white interval-4 mr-3">
+                        Директор консалтингового агентства <br class="display-md-none">
+                        по ВЭД | востоковед
+                    </span>
+                </div>
+                <div class="flex align-items-center delay-5 anim anim--right -elem-">
+                    <img class="icon text-36 text-md-24 mr-3" src="img/pictures/nameplate-3.svg" alt="">
+                    <span class="text-shadow text-18 text-md-14 bold-4 color-white interval-4 mr-3">
+                        Председатель комитета по международному <br class="display-md-none">
+                        сотрудничеству ККО "Опора России"
+                    </span>
+                </div>
+            </div>
+            <button class="btn btn--second btn--fill text-18 radius-2 width-max py-3 px-8 mt-6 mt-md-0 delay-6 anim anim--right -elem- -waved-" data-fancybox-modal data-type="ajax" data-src="dialogs/dialog-feedback.html">Связаться</button>
+        </div>
+    </section>
+
+    <!-- Эффективность -->
+
+    <% var effectiveness = [
+        {text: 'Хотите повысить эффективность отдела ВЭД?'},
+        {text: 'Снизить затраты и риски внешнеэкономической деятельности?'},
+        {text: 'Хотите быть уверенными в безопасности вашего бизнеса на 100%?'},
+        {text: 'Автоматизировать бизнес-процессы ВЭД и сократить количество сотрудников?'},
+        {text: 'Хотите запустить ВЭД максимально быстро и с гарантией безопасности?'}
+    ] %>
+
+    <section class="effectiveness container pb-0" id="effectiveness">
+        <h1 class="font-alt text text--center text-40 text-tb-32 text-md-28 text-clip-green bold-8 interval-3 mb-10 mb-md-5 anim anim--up -elem-">Повышаем эффективность отдела ВЭД</h1>
+        <div class="flex flex-direction-column gap-4">
+            <% for (var i = 0; i < effectiveness.length; i++) { %>
+                <div class="card py-6 px-9 py-md-4 px-md-4 anim anim--up -elem- -waved-" data-fancybox-modal data-type="ajax" data-src="dialogs/dialog-feedback.html">
+                    <div class="card-content gap-3">
+                        <p class="text-18 text-md-14 bold-6 interval-4"><%= effectiveness[i].text %></p>
+                        <span class="text-30 text-md-24 color-primary">
+                            <svg class="icon">
+                                <use xlink:href="img/icons.svg#question" />
+                            </svg>
+                        </span>
+                    </div>
+                </div>
+            <% } %>
+        </div>
+    </section>
+
+    <!-- Аутсорсинг -->
+
+    <% var outsourcing = [
+        {
+            col: 'col-6',
+            text: 'Автоматизируем и настроим ваши бизнес-процессы ВЭД <br class="display-md-none">без потери информации и времени'
+        },
+        {
+            col: 'col-6',
+            text: 'Предложим слаженную работу логиста, закупщика, <br class="display-md-none">валютного бухгалтера, переводчика и директора по ВЭД'
+        },
+        {
+            col: 'col-6',
+            text: 'Разработаем стандарты документов, отвечающих всем <br class="display-md-none">требованиям контролирующих органов к вашему товару'
+        },
+        {
+            col: 'col-6',
+            text: 'Проведем аудит всех действующих систем ВЭД, обучим <br class="display-md-none">и повысим квалификацию штатных специалистов'
+        },
+        {
+            col: 'col-12',
+            text: 'Обеспечим наилучший результат при разовых, нестандартных или нерегулярных поставках'
+        },
+    ] %>
+
+    <section class="outsourcing container overflow-hidden pb-0">
+        <h1 class="font-alt text text--center text-40 text-tb-32 text-md-28 text-clip-gold bold-8 interval-3 mb-10 mb-md-5 anim anim--up -elem-">Закажи готовый отдел ВЭД на аутсорсе</h1>
+        <div class="outsourcing__items grid gap-4 mb-10 mb-md-5">
+            <% for (var i = 0; i < outsourcing.length; i++) { %>
+                <div class="outsourcing__item <%= outsourcing[i].col %> col-lg-12 relative radius-2 overflow-hidden p-4 anim anim--right -elem-">
+                    <div class="flex align-items-center gap-5 gap-md-2 relative z-1 height-100">
+                        <div class="outsourcing__pic flex align-items-center justify-content-center bg-white color-primary text-24 radius-max">
+                            <svg class="icon">
+                                <use xlink:href="img/icons.svg#check" />
+                            </svg>
+                        </div>
+                        <p class="outsourcing__text text-16 text-md-14 bold-6 interval-4"><%= outsourcing[i].text %></p>
+                    </div>
+                </div>
+            <% } %>
+        </div>
+        <button class="btn btn--second btn--fill radius-2 py-3 px-8 mx-auto mb-10 anim anim--right -elem- -waved-" data-fancybox-modal data-type="ajax" data-src="dialogs/dialog-feedback.html">
+            <span class="display-md-none">Закажи бесплатную консультацию</span>
+            <span class="display-none display-md-block">Консультация</span>
+        </button>
+        <div class="gift relative radius-6 box-shadow py-8 px-10 py-md-5 px-md-4 anim anim--up -elem-">
+            <div class="gift__bg absolute radius-6 width-100 height-100 overflow-hidden">
+                <div class="gift__line line line--1"></div>
+                <div class="gift__line line line--2"></div>
+                <div class="gift__line line line--3"></div>
+                <div class="gift__line line line--4"></div>
+                <div class="gift__line line line--5"></div>
+            </div>
+            <div class="gift__content relative">
+                <p class="text text--center text-18 text-md-16 bold-6 color-white interval-4 mb-8 mb-md-5">Заполни заявку на консультацию и получи ПОДАРКИ</p>
+                <div class="gift__items grid gap-7 gap-md-4">
+                    <a class="gift__item col-4 col-lg-6 col-tb-12 relative bg-white radius-6 overflow-hidden p-4 anim anim--up -elem- -waved-" href="https://www.youtube.com/watch?app=desktop&v=SWG1oam9SG0" data-fancybox-modal>
+                        <div class="gift__block flex flex-direction-column align-items-center justify-content-center radius-6 height-100 py-4 px-1">
+                            <div class="gift__image relative radius-6 width-100 mb-3">
+                                <div class="pic pic--segment radius-6">
+                                    <div class="loader">
+                                        <svg class="icon">
+                                            <use xlink:href="img/icons.svg#loader" />
+                                        </svg>
+                                    </div>
+                                    <picture>
+                                        <source srcset="img/pictures/gift-1.webp" type="image/webp">
+                                        <img class="pic__img" src="img/pictures/gift-1.jpg" alt="" loading="lazy">
+                                    </picture>
+                                </div>
+                            </div>
+                            <b class="text text--center text--uppercase text-18 bold-6 interval-1 mb-2">ВИДЕО:</b>
+                            <p class="text text--center text-16 bold-4 interval-1">«Как устроена международная логистика»</p>
+                        </div>
+                        <div class="gift__nameplate flex align-items-center justify-content-center font-alt text text--center text--uppercase text-20 absolute interval-1 bold-8 color-white px-5" style="background: var(--bg-yellow);">ПОДАРОК</div>
+                    </a>
+                    <div class="gift__item col-4 col-lg-6 col-tb-12 relative bg-white radius-6 overflow-hidden cursor p-4 delay-2 anim anim--up -elem- -waved-" data-fancybox-modal data-type="ajax" data-src="dialogs/dialog-article-bicycle.html">
+                        <div class="gift__block flex flex-direction-column align-items-center justify-content-center radius-6 height-100 py-4 px-1">
+                            <div class="gift__image relative radius-6 width-100 mb-3">
+                                <div class="pic pic--segment radius-6">
+                                    <div class="loader">
+                                        <svg class="icon">
+                                            <use xlink:href="img/icons.svg#loader" />
+                                        </svg>
+                                    </div>
+                                    <picture>
+                                        <source srcset="img/pictures/gift-2.webp" type="image/webp">
+                                        <img class="pic__img" src="img/pictures/gift-2.jpg" alt="" loading="lazy">
+                                    </picture>
+                                </div>
+                            </div>
+                            <b class="text text--center text--uppercase text-18 bold-6 interval-1 mb-2">Статья КЕЙС ЭКСПЕРТА:</b>
+                            <p class="text text--center text-16 bold-4 interval-1">«Внешне-экономическая деятельность компании-бренда товаров для спорта»</p>
+                        </div>
+                        <div class="gift__nameplate flex align-items-center justify-content-center font-alt text text--center text--uppercase text-20 absolute interval-1 bold-8 color-white px-5" style="background: var(--bg-green);">ПОДАРОК</div>
+                    </div>
+                    <a class="gift__item col-4 col-lg-6 col-tb-12 relative bg-white radius-6 overflow-hidden p-4 delay-4 anim anim--up -elem- -waved-" href="javascript: ;">
+                        <div class="gift__block flex flex-direction-column align-items-center justify-content-center radius-6 height-100 py-4 px-1">
+                            <div class="gift__image relative radius-6 width-100 mb-3">
+                                <div class="pic pic--segment radius-6">
+                                    <div class="gift__close flex align-items-center justify-content-center absolute text-34 color-white width-100 height-100">
+                                        <svg class="icon">
+                                            <use xlink:href="img/icons.svg#close" />
+                                        </svg>
+                                    </div>
+                                </div>
+                                <div class="gift__info flex align-items-center justify-content-center text text--center absolute mx-auto text-14 radius-6 width-max py-2 px-5">Скоро получите</div>
+                            </div>
+                            <b class="text text--center text--uppercase text-18 bold-6 interval-1 mb-2">ВИДЕО:</b>
+                            <p class="text text--center text-16 bold-4 interval-1">«Что такое SWIFT и почему блокируются платежи?!»</p>
+                        </div>
+                        <div class="gift__nameplate flex align-items-center justify-content-center font-alt text text--center text--uppercase text-20 absolute interval-1 bold-8 color-white px-5" style="background: var(--bg-red);">СКОРО</div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Преимущества -->
+
+    <% var balance = [
+        {
+            icon: 'x',
+            color: 'red',
+            text: 'Временные затраты на подбор и обучение персонала'
+        },
+        {
+            icon: 'check',
+            color: 'primary',
+            text: 'Высокая скорость операций за счёт работы слаженной команды специалистов'
+        },
+        {
+            icon: 'x',
+            color: 'red',
+            text: 'Налогообложение зарплатного фонда'
+        },
+        {
+            icon: 'check',
+            color: 'primary',
+            text: 'Оплата только за результат'
+        },
+        {
+            icon: 'x',
+            color: 'red',
+            text: 'Перегрузка персонала: часто один менеджер по ВЭД выполняет в компании функции закупщика, логиста, переговорщика, возможно, даже таможенного декларанта и валютного бухгалтера. Это может приводить к высокой загруженности, ошибкам и низкой квалификации сотрудника в каждой из областей'
+        },
+        {
+            icon: 'check',
+            color: 'primary',
+            text: 'Высокая квалификация логистов, закупщиков, переводчиков, аудиторов на производстве, таможенных декларантов, специализированных бухгалтеров и другого персонала'
+        },
+        {
+            icon: 'x',
+            color: 'red',
+            text: 'Недостаточная загрузка персонала: когда компания может позволить себе создать отдел ВЭД из нескольких специалистов, часто их загрузка неравномерна, например, логист загружен на 1,3 ставки, а переводчик только на 0,8'
+        },
+        {
+            icon: 'check',
+            color: 'primary',
+            text: 'Привлечение только необходимых специалистов. Решением конкретных задач Вашей компании занимаются лучшие специалисты, часть из которых находится в Китае. Им не нужно оплачивать релокацию, документы и командировочные расходы'
+        },
+        {
+            icon: 'x',
+            color: 'red',
+            text: 'Ограниченный выбор контрагентов, маршрутов, возможностей: часто штатный персонал не замотивирован на отслеживание изменений, поиск более выгодных маршрутов, новых партнёров и обновление знаний об изменениях законодательства'
+        },
+        {
+            icon: 'check',
+            color: 'primary',
+            text: 'Наш персонал одновременно работает в нескольких проектах, ежедневно решая задачи разных клиентов. Это стимулирует каждого специалиста находить наилучшее решение для каждой обратившейся к нам компании'
+        },
+        {
+            icon: 'x',
+            color: 'red',
+            text: 'Стандартные операции: в силу привычки штатные сотрудники часто блокируют инициативы по автоматизации бизнес-процессов'
+        },
+        {
+            icon: 'check',
+            color: 'primary',
+            text: 'Мы заинтересованы в максимальной автоматизации бизнес-процессов, так как ценим своё и Ваше время, не любим ручной труд и стремимся к исключению ошибок при передаче данных'
+        },
+        {
+            icon: 'x',
+            color: 'red',
+            text: 'Отсутствие кросс-культурной базы: часто сотрудник, который ведёт переговоры с зарубежным партнёром не знает его языка, деловых обычаев и требований к оформляемым документам'
+        },
+        {
+            icon: 'check',
+            color: 'primary',
+            text: 'Наши специалисты отлично знают не только свою работу, но и особенности бизнес-процессов российских и зарубежных компаний, с которыми мы сотрудничаем'
+        },
+        {
+            icon: 'x',
+            color: 'red',
+            text: 'Слабое взаимодействие между отделами: часто каждый из отделов контролирует свою часть процесса, упуская возможности общей оптимизации временных и финансовых затрат компании'
+        },
+        {
+            icon: 'check',
+            color: 'primary',
+            text: 'Мы заранее составляем дорожную карту для каждого проекта и работаем как одна команда, передавая Вам готовый результат'
+        },
+        {
+            icon: 'x',
+            color: 'red',
+            text: 'Отсутствие единого управляющего: в редких компаниях логистика подчинена интересам налогообложения, а документы поставщика выпускаются с учётом требований законодательства ЕАЭС'
+        },
+        {
+            icon: 'check',
+            color: 'primary',
+            text: 'Вы общаетесь с Директором по ВЭД, он организует работу персонала для Вашего наилучшего результата'
+        }
+    ] %>
+    
+    <section class="balance container overflow-hidden pb-0 pb-md-4">
+        <h1 class="font-alt text text--center text-40 text-tb-32 text-md-28 bold-8 interval-3 mb-10 mb-md-5 anim anim--up -elem-">Преимущества отдела ВЭД на аутсорсе</h1>
+        <div class="balance__items grid display-tb-none radius-6 bg-gray overflow-hidden box-shadow mb-10 anim anim--fade -elem-">
+            <div class="col-6 bg-white">
+                <h2 class="balance__problems text text--center text-18 bold-6 p-6">Проблемы штатного отдела ВЭД</h2>
+            </div>
+            <div class="col-6 bg-white">
+                <h2 class="balance__advantages text text--center text-18 bold-6 p-6">Преимущества ВЭД на аутсорсе</h2>
+            </div>
+            <% for (var i = 0; i < balance.length; i++) { %>
+                <div class="col-6 bg-white">
+                    <div class="flex p-6">
+                        <span class="text-20 color-<%= balance[i].color %> mr-4">
+                            <svg class="icon">
+                                <use xlink:href="img/icons.svg#<%= balance[i].icon %>" />
+                            </svg>
+                        </span>
+                        <p class="text-16 bold-4 interval-4"><%= balance[i].text %></p>
+                    </div>
+                </div>
+            <% } %>
+        </div>
+        <div class="business flex align-items-center justify-content-between gap-5 bg-white box-shadow radius-6 p-4 p-lg-8 p-md-2 anim anim--left -elem-">
+            <div class="business__info flex flex-direction-column width-100 pl-4 pl-lg-0 px-md-2 pb-md-4">
+                <b class="text-20 bold-6 mb-3">Хорошая новость:</b>
+                <p class="text-16 bold-4 interval-4 mb-5">
+                    Вы и так уже отдали большую часть процессов ВЭД на аутсорсинг! Скорее всего, Ваш товар везёт логистическая компания, декларацию подаёт таможенный представитель, а документы контролирует банк. 
+                </p>
+                <b class="text-20 bold-6 mb-3">Плохая новость:</b>
+                <p class="text-16 bold-4 interval-4">
+                    Ответственность перед государством единолично несёте Вы
+                </p>
+                <button class="btn btn--second btn--fill display-none display-tb-flex radius-2 width-max py-3 px-8 mt-5 -waved-" data-fancybox-modal data-type="ajax" data-src="dialogs/dialog-balance.html">Подробнее</button>
+            </div>
+            <div class="business__banner relative width-100 radius-6">
+                <div class="business__bg absolute width-100 height-100 overflow-hidden">
+                    <div class="business__line business__line--1 line line--1"></div>
+                    <div class="business__line business__line--2 line line--2"></div>
+                    <div class="business__line business__line--3 line line--3"></div>
+                    <div class="business__line business__line--4 line line--4"></div>
+                    <div class="business__line business__line--5 line line--5"></div>
+                </div>
+                <div class="business__content flex flex-direction-column align-items-end justify-content-center relative height-100 p-10 p-tb-4">
+                    <h2 class="relative z-1 text-24 text-md-18 text-shadow bold-7 interval-4 color-white">
+                        Вы занимаетесь бизнесом, <br>
+                        мы занимаемся ВЭД!
+                    </h2>
+                    <div class="business__image absolute width-100 width-md-auto height-md-100">
+                        <picture>
+                            <source srcset="img/pictures/business.webp" type="image/webp">
+                            <img class="width-100" src="img/pictures/business.png" alt="" loading="lazy">
+                        </picture>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Поставщик -->
+
+    <% var provider = [
+        {text: 'Есть собственный маркетплейс или магазин в России, но не знаете, как наладить поставки из-за границы?'},
+        {text: 'Нужно провести внешнеторговую сделку, а времени нанимать сотрудников отдела ВЭД нет?'},
+        {text: 'Хотите быть уверенными в качестве отгружаемого товара?'},
+        {text: 'Хотите максимально прозрачные валютные платежи с гарантией получения?'},
+        {text: 'Ищите новые маршруты доставки?'},
+        {text: 'Хотите быстрое и качественное таможенное оформление без рисков постконтроля в течение 3-х лет?'},
+        {text: 'Хотите оптимизировать налогообложение?'}
+    ] %>
+
+    <section class="provider container pb-0" id="provider">
+        <h1 class="font-alt text text--center text-40 text-tb-32 text-md-28 text-clip-green bold-8 interval-3 mb-10 mb-md-5 anim anim--up -elem-">Ищите поставщика в Китае?</h1>
+        <div class="flex flex-direction-column gap-4">
+            <% for (var i = 0; i < provider.length; i++) { %>
+                <div class="card py-6 px-9 py-md-4 px-md-4 anim anim--up -elem- -waved-" data-fancybox-modal data-type="ajax" data-src="dialogs/dialog-feedback.html">
+                    <div class="card-content gap-3">
+                        <p class="text-18 text-md-14 bold-6 interval-4"><%= provider[i].text %></p>
+                        <span class="text-30 text-md-24 color-primary">
+                            <svg class="icon">
+                                <use xlink:href="img/icons.svg#question" />
+                            </svg>
+                        </span>
+                    </div>
+                </div>
+            <% } %>
+        </div>
+    </section>
+
+    <!-- Комплекс -->
+
+    <% var complex = [
+        {
+            col: 'col-6',
+            text: 'Подберём пул поставщиков'
+        },
+        {
+            col: 'col-6',
+            text: 'Проведём переговоры  на китайском языке со знанием <br class="display-md-none">специфики и менталитета '
+        },
+        {
+            col: 'col-6',
+            text: 'Подпишем прямые контракты и наладим <br class="display-md-none">документооборот'
+        },
+        {
+            col: 'col-6',
+            text: 'Убедимся, что поставщики готовы работать <br class="display-md-none">с российскими компаниями'
+        },
+        {
+            col: 'col-6',
+            text: 'Организуем поставки товара через третьи страны'
+        },
+        {
+            col: 'col-6',
+            text: 'Проведём экспертизу, предотгрузочную инспекцию, <br class="display-md-none">ответственную приемку и лабораторные испытания <br class="display-md-none">закупаемого товара'
+        },
+        {
+            col: 'col-6',
+            text: 'Работаем с банками, имеющими прямые кор.счета <br class="display-md-none">в Китае, не используя SWIFT'
+        },
+        {
+            col: 'col-6',
+            text: 'В нашей базе более 20 логистических компаний, мы подберём оптимальный маршрут и вид транспорта'
+        },
+        {
+            col: 'col-6',
+            text: 'Берём на себя обязательства по валютному контролю <br class="display-md-none">и таможенному оформлению'
+        },
+        {
+            col: 'col-6',
+            text: 'Предоставляем документы для возмещения НДС, уплаченного при импорте'
+        },
+        {
+            col: 'col-12',
+            text: 'Обеспечим наилучший результат при разовых, нестандартных или нерегулярных поставках'
+        },
+    ] %>
+
+    <section class="outsourcing container overflow-hidden pb-0">
+        <h1 class="font-alt text text--center text-40 text-tb-32 text-md-28 text-clip-gold bold-8 interval-3 mb-10 mb-md-5 anim anim--up -elem-">Закажите комплексное сопровождение ВЭД</h1>
+        <div class="outsourcing__items grid gap-4 mb-10 mb-md-5">
+            <% for (var i = 0; i < complex.length; i++) { %>
+                <div class="outsourcing__item <%= complex[i].col %> col-lg-12 relative radius-2 overflow-hidden p-4 anim anim--right -elem-">
+                    <div class="flex align-items-center gap-5 gap-md-2 relative z-1 height-100">
+                        <div class="outsourcing__pic flex align-items-center justify-content-center bg-white color-primary text-24 radius-max">
+                            <svg class="icon">
+                                <use xlink:href="img/icons.svg#check" />
+                            </svg>
+                        </div>
+                        <p class="outsourcing__text text-16 text-md-14 bold-6 interval-4"><%= complex[i].text %></p>
+                    </div>
+                </div>
+            <% } %>
+        </div>
+        <button class="btn btn--second btn--fill radius-2 py-3 px-8 mx-auto mb-10 anim anim--right -elem- -waved-" data-fancybox-modal data-type="ajax" data-src="dialogs/dialog-feedback.html">
+            <span class="display-md-none">Получить расчет себестоимости импортного товара </span>
+            <span class="display-none display-md-block">Получить расчет</span>
+        </button>
+        <div class="gift relative radius-6 box-shadow py-8 px-10 py-md-5 px-md-4 anim anim--up -elem-">
+            <div class="gift__bg absolute radius-6 width-100 height-100 overflow-hidden">
+                <div class="gift__line line line--1"></div>
+                <div class="gift__line line line--2"></div>
+                <div class="gift__line line line--3"></div>
+                <div class="gift__line line line--4"></div>
+                <div class="gift__line line line--5"></div>
+            </div>
+            <div class="gift__content relative">
+                <p class="text text--center text-18 text-md-16 bold-6 color-white interval-4 mb-8 mb-md-5">
+                    Оставь заявку на консультацию и получи ПОДАРОК: «Расчёт себестоимости импортного товара»
+                </p>
+                <div class="gift__items grid gap-7 gap-md-4">
+                    <a class="gift__item col-6 col-tb-12 relative bg-white radius-6 overflow-hidden p-4 anim anim--up -elem- -waved-" href="https://dzen.ru/media/cninfo/vykin-posrednika-iz-sdelki-i-razvali-svoi-biznes-625686218eecdd291ea72a38" target="_blank">
+                        <div class="gift__block flex flex-direction-column align-items-center justify-content-center radius-6 height-100 py-4 px-1">
+                            <div class="gift__image relative radius-6 width-100 mb-3">
+                                <div class="pic pic--segment radius-6">
+                                    <div class="loader">
+                                        <svg class="icon">
+                                            <use xlink:href="img/icons.svg#loader" />
+                                        </svg>
+                                    </div>
+                                    <picture>
+                                        <source srcset="img/pictures/gift-3.webp" type="image/webp">
+                                        <img class="pic__img" src="img/pictures/gift-3.jpg" alt="" loading="lazy">
+                                    </picture>
+                                </div>
+                            </div>
+                            <b class="text text--center text--uppercase text-18 bold-6 interval-1 mb-2">ЭКСПЕРТНАЯ СТАТЬЯ:</b>
+                            <p class="text text--center text-16 bold-4 interval-1">«Выкинь посредника из сделки и развали свой бизнес»</p>
+                        </div>
+                        <div class="gift__nameplate flex align-items-center justify-content-center font-alt text text--center text--uppercase text-20 absolute interval-1 bold-8 color-white px-5" style="background: var(--bg-red);">ПОДАРОК</div>
+                    </a>
+                    <a class="gift__item col-6 col-tb-12 relative bg-white radius-6 overflow-hidden p-4 delay-2 anim anim--up -elem- -waved-" href="javascript: ;">
+                        <div class="gift__block flex flex-direction-column align-items-center justify-content-center radius-6 height-100 py-4 px-1">
+                            <div class="gift__image relative radius-6 width-100 mb-3">
+                                <div class="pic pic--segment radius-6">
+                                    <div class="gift__close flex align-items-center justify-content-center absolute text-34 color-white width-100 height-100">
+                                        <svg class="icon">
+                                            <use xlink:href="img/icons.svg#close" />
+                                        </svg>
+                                    </div>
+                                </div>
+                                <div class="gift__info flex align-items-center justify-content-center text text--center absolute mx-auto text-14 radius-6 width-max py-2 px-5">Скоро получите</div>
+                            </div>
+                            <b class="text text--center text--uppercase text-18 bold-6 interval-1 mb-2">ВИДЕО:</b>
+                            <p class="text text--center text-16 bold-4 interval-1">Кто такие посредники?</p>
+                        </div>
+                        <div class="gift__nameplate flex align-items-center justify-content-center font-alt text text--center text--uppercase text-20 absolute interval-1 bold-8 color-white px-5" style="background: var(--bg-purple);">СКОРО</div>
+                    </a>
+                    <a class="gift__item col-6 col-tb-12 relative bg-white radius-6 overflow-hidden p-4 anim anim--up -elem- -waved-" href="javascript: ;">
+                        <div class="gift__block flex flex-direction-column align-items-center justify-content-center radius-6 height-100 py-4 px-1">
+                            <div class="gift__image relative radius-6 width-100 mb-3">
+                                <div class="pic pic--segment radius-6">
+                                    <div class="gift__close flex align-items-center justify-content-center absolute text-34 color-white width-100 height-100">
+                                        <svg class="icon">
+                                            <use xlink:href="img/icons.svg#close" />
+                                        </svg>
+                                    </div>
+                                </div>
+                                <div class="gift__info flex align-items-center justify-content-center text text--center absolute mx-auto text-14 radius-6 width-max py-2 px-5">Скоро получите</div>
+                            </div>
+                            <b class="text text--center text--uppercase text-18 bold-6 interval-1 mb-2">ВИДЕО:</b>
+                            <p class="text text--center text-16 bold-4 interval-1">«Китай - это завод, а не базар»</p>
+                        </div>
+                        <div class="gift__nameplate flex align-items-center justify-content-center font-alt text text--center text--uppercase text-20 absolute interval-1 bold-8 color-white px-5" style="background: var(--bg-green);">СКОРО</div>
+                    </a>
+                    <a class="gift__item col-6 col-tb-12 relative bg-white radius-6 overflow-hidden p-4 delay-2 anim anim--up -elem- -waved-" href="javascript: ;">
+                        <div class="gift__block flex flex-direction-column align-items-center justify-content-center radius-6 height-100 py-4 px-1">
+                            <div class="gift__image relative radius-6 width-100 mb-3">
+                                <div class="pic pic--segment radius-6">
+                                    <div class="gift__close flex align-items-center justify-content-center absolute text-34 color-white width-100 height-100">
+                                        <svg class="icon">
+                                            <use xlink:href="img/icons.svg#close" />
+                                        </svg>
+                                    </div>
+                                </div>
+                                <div class="gift__info flex align-items-center justify-content-center text text--center absolute mx-auto text-14 radius-6 width-max py-2 px-5">Скоро получите</div>
+                            </div>
+                            <b class="text text--center text--uppercase text-18 bold-6 interval-1 mb-2">СТАТЬЯ КЕЙС ЭКСПЕРТА:</b>
+                            <p class="text text--center text-16 bold-4 interval-1">Фатальные ошибки ВЭД-бизнеса»</p>
+                        </div>
+                        <div class="gift__nameplate flex align-items-center justify-content-center font-alt text text--center text--uppercase text-20 absolute interval-1 bold-8 color-white px-5" style="background: var(--bg-yellow);">СКОРО</div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Китай -->
+
+    <% var china = [
+        {text: 'Хотите продавать свой товар в Китае?'},
+        {text: 'Нужно разобраться в тонкостях требований китайский регуляторов?'},
+        {text: 'Хотите максимально быстро и эффективно адаптировать товар под запрос китайских потребителей?'},
+        {text: 'Хотите обеспечить 100% гарантию получения оплаты за товар?'},
+        {text: 'Нужно оформить документы для возмещения экспортного НДС?'},
+        {text: 'Хотите иметь  ответственного сотрудника по ВЭД с опытной командой экспортеров на китайской стороне?'},
+        {text: 'Хотите выйти на электронные площадки  в Китае?'}
+    ] %>
+
+    <section class="china container pb-0" id="china">
+        <h1 class="font-alt text text--center text-40 text-tb-32 text-md-28 text-clip-green bold-8 interval-3 mb-10 mb-md-5 anim anim--up -elem-">Экспорт в Китай</h1>
+        <div class="flex flex-direction-column gap-4">
+            <% for (var i = 0; i < china.length; i++) { %>
+                <div class="card py-6 px-9 py-md-4 px-md-4 anim anim--up -elem- -waved-" data-fancybox-modal data-type="ajax" data-src="dialogs/dialog-feedback.html">
+                    <div class="card-content gap-3">
+                        <p class="text-18 text-md-14 bold-6 interval-4"><%= china[i].text %></p>
+                        <span class="text-30 text-md-24 color-primary">
+                            <svg class="icon">
+                                <use xlink:href="img/icons.svg#question" />
+                            </svg>
+                        </span>
+                    </div>
+                </div>
+            <% } %>
+        </div>
+    </section>
+
+    <!-- Сопровождение -->
+
+    <% var escort = [
+        {
+            col: 'col-6',
+            text: 'Найдем потенциальных покупателей'
+        },
+        {
+            col: 'col-6',
+            text: 'Проведём переговоры  на китайском языке <br class="display-md-none">со знанием специфики и менталитета'
+        },
+        {
+            col: 'col-6',
+            text: 'Подпишем прямые контракты и наладим документооборот, <br class="display-md-none">благодаря сопровождению логистов,  закупщиков, <br class="display-md-none">валютного бухгалтера, переводчиков и директора по ВЭД'
+        },
+        {
+            col: 'col-6',
+            text: 'Работаем с банками, имеющими прямые кор.счета <br class="display-md-none">в Китае, не используя SWIFT'
+        },
+        {
+            col: 'col-6',
+            text: 'Предоставляем документы для возмещения НДС, <br class="display-md-none">уплаченного при экспорте'
+        },
+        {
+            col: 'col-6',
+            text: 'Организуем доставку товара, таможенную очистку <br class="display-md-none">и хранение на складе в Китае'
+        },
+        {
+            col: 'col-6',
+            text: 'Проведем маркетинговые исследования в Китае, <br class="display-md-none">выявим самые продаваемые товары'
+        },
+        {
+            col: 'col-6',
+            text: 'Зарегистрируем торговую марку в Китае, внесем <br class="display-md-none">производителя в ГТУ, сертифицируем товар'
+        },
+        {
+            col: 'col-6',
+            text: 'Разработаем упаковку, заметную для китайского <br class="display-md-none">потребителя'
+        },
+        {
+            col: 'col-6',
+            text: 'Зарегистрируем этикетку в соответствии <br class="display-md-none">с требованиям гос.органов Китая'
+        },
+        {
+            col: 'col-12',
+            text: 'Работаем с электронными торговыми площадками Китая'
+        },
+    ] %>
+
+    <section class="outsourcing container overflow-hidden pb-0">
+        <h1 class="font-alt text text--center text-40 text-tb-32 text-md-28 text-clip-gold bold-8 interval-3 mb-10 mb-md-5 anim anim--up -elem-">Закажите комплексное сопровождение экспорта</h1>
+        <div class="outsourcing__items grid gap-4 mb-10 mb-md-5">
+            <% for (var i = 0; i < escort.length; i++) { %>
+                <div class="outsourcing__item <%= escort[i].col %> col-lg-12 relative radius-2 overflow-hidden p-4 anim anim--right -elem-">
+                    <div class="flex align-items-center gap-5 gap-md-2 relative z-1 height-100">
+                        <div class="outsourcing__pic flex align-items-center justify-content-center bg-white color-primary text-24 radius-max">
+                            <svg class="icon">
+                                <use xlink:href="img/icons.svg#check" />
+                            </svg>
+                        </div>
+                        <p class="outsourcing__text text-16 text-md-14 bold-6 interval-4"><%= escort[i].text %></p>
+                    </div>
+                </div>
+            <% } %>
+        </div>
+        <button class="btn btn--second btn--fill radius-2 py-3 px-8 mx-auto mb-10 anim anim--right -elem- -waved-" data-fancybox-modal data-type="ajax" data-src="dialogs/dialog-feedback.html">
+            <span class="display-md-none">Записаться на консультацию</span>
+            <span class="display-none display-md-block">Консультация</span>
+        </button>
+        <div class="gift relative radius-6 box-shadow py-8 px-10 py-md-5 px-md-4 anim anim--up -elem-">
+            <div class="gift__bg absolute radius-6 width-100 height-100 overflow-hidden">
+                <div class="gift__line line line--1"></div>
+                <div class="gift__line line line--2"></div>
+                <div class="gift__line line line--3"></div>
+                <div class="gift__line line line--4"></div>
+                <div class="gift__line line line--5"></div>
+            </div>
+            <div class="gift__content relative">
+                <p class="text text--center text-18 text-md-16 bold-6 color-white interval-4 mb-8 mb-md-5">
+                    Оставь заявку на консультацию и получи ПОДАРОК: «Расчёт себестоимости экспортного товара»
+                </p>
+                <div class="gift__items grid gap-7 gap-md-4">
+                    <a class="gift__item col-4 col-lg-6 col-tb-12 relative bg-white radius-6 overflow-hidden p-4 anim anim--up -elem- -waved-" href="https://yugtimes.com/news/82632/" target="_blank">
+                        <div class="gift__block flex flex-direction-column align-items-center justify-content-center radius-6 height-100 py-4 px-1">
+                            <div class="gift__image relative radius-6 width-100 mb-3">
+                                <div class="pic pic--segment radius-6">
+                                    <div class="loader">
+                                        <svg class="icon">
+                                            <use xlink:href="img/icons.svg#loader" />
+                                        </svg>
+                                    </div>
+                                    <picture>
+                                        <source srcset="img/pictures/gift-4.webp" type="image/webp">
+                                        <img class="pic__img" src="img/pictures/gift-4.jpg" alt="" loading="lazy">
+                                    </picture>
+                                </div>
+                            </div>
+                            <b class="text text--center text--uppercase text-18 bold-6 interval-1 mb-2">СТАТЬЯ в «ЮГ~TIMES»</b>
+                            <p class="text text--center text-16 bold-4 interval-1">«Сегодня время для выхода на китайский рынок»</p>
+                        </div>
+                        <div class="gift__nameplate flex align-items-center justify-content-center font-alt text text--center text--uppercase text-20 absolute interval-1 bold-8 color-white px-5" style="background: var(--bg-yellow);">ПОДАРОК</div>
+                    </a>
+                    <div class="gift__item col-4 col-lg-6 col-tb-12 relative bg-white radius-6 overflow-hidden cursor p-4 delay-2 anim anim--up -elem- -waved-" data-fancybox-modal data-type="ajax" data-src="dialogs/dialog-article-case.html">
+                        <div class="gift__block flex flex-direction-column align-items-center justify-content-center radius-6 height-100 py-4 px-1">
+                            <div class="gift__image relative radius-6 width-100 mb-3">
+                                <div class="pic pic--segment radius-6">
+                                    <div class="loader">
+                                        <svg class="icon">
+                                            <use xlink:href="img/icons.svg#loader" />
+                                        </svg>
+                                    </div>
+                                    <picture>
+                                        <source srcset="img/pictures/gift-6.webp" type="image/webp">
+                                        <img class="pic__img" src="img/pictures/gift-6.jpg" alt="" loading="lazy">
+                                    </picture>
+                                </div>
+                            </div>
+                            <b class="text text--center text--uppercase text-18 bold-6 interval-1 mb-2">Статья "Кейс Эксперта":</b>
+                            <p class="text text--center text-16 bold-4 interval-1">«Комплексное сопровождение ВЭД»</p>
+                        </div>
+                        <div class="gift__nameplate flex align-items-center justify-content-center font-alt text text--center text--uppercase text-20 absolute interval-1 bold-8 color-white px-5" style="background: var(--bg-green);">СКОРО</div>
+                    </div>
+                    <a class="gift__item col-4 col-lg-6 col-tb-12 relative bg-white radius-6 overflow-hidden p-4 delay-4 anim anim--up -elem- -waved-" href="javascript: ;">
+                        <div class="gift__block flex flex-direction-column align-items-center justify-content-center radius-6 height-100 py-4 px-1">
+                            <div class="gift__image relative radius-6 width-100 mb-3">
+                                <div class="pic pic--segment radius-6">
+                                    <div class="gift__close flex align-items-center justify-content-center absolute text-34 color-white width-100 height-100">
+                                        <svg class="icon">
+                                            <use xlink:href="img/icons.svg#close" />
+                                        </svg>
+                                    </div>
+                                </div>
+                                <div class="gift__info flex align-items-center justify-content-center text text--center absolute mx-auto text-14 radius-6 width-max py-2 px-5">Скоро получите</div>
+                            </div>
+                            <b class="text text--center text--uppercase text-18 bold-6 interval-1 mb-2">Экспертная статья</b>
+                            <p class="text text--center text-16 bold-4 interval-1">«Сегодня время для выхода на китайский рынок»</p>
+                        </div>
+                        <div class="gift__nameplate flex align-items-center justify-content-center font-alt text text--center text--uppercase text-20 absolute interval-1 bold-8 color-white px-5" style="background: var(--bg-red);">СКОРО</div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Специалист -->
+
+    <% var specialist = [
+        {text: 'Нужно обеспечить нанесение маркировки до прихода товара в РФ?'},
+        {text: 'Нужно проконтролировать правильность нанесения маркировки на складе поставщика?'},
+        {text: 'Товар подлежит цифровой прослеживаемости?'},
+        {text: 'Нужно обеспечить корректную передачу сведений в «Честный знак», «ЕГАИС»?'},
+        {text: 'Хочешь существенно  сократить время на работу с маркировкой?'}
+    ] %>
+
+    <section class="specialist container pb-0" id="specialist">
+        <h1 class="font-alt text text--center text-40 text-tb-32 text-md-28 text-clip-green bold-8 interval-3 mb-10 mb-md-5 anim anim--up -elem-">Ищите специалиста по маркировке?</h1>
+        <div class="flex flex-direction-column gap-4">
+            <% for (var i = 0; i < specialist.length; i++) { %>
+                <div class="card py-6 px-9 py-md-4 px-md-4 anim anim--up -elem- -waved-" data-fancybox-modal data-type="ajax" data-src="dialogs/dialog-feedback.html">
+                    <div class="card-content gap-3">
+                        <p class="text-18 text-md-14 bold-6 interval-4"><%= specialist[i].text %></p>
+                        <span class="text-30 text-md-24 color-primary">
+                            <svg class="icon">
+                                <use xlink:href="img/icons.svg#question" />
+                            </svg>
+                        </span>
+                    </div>
+                </div>
+            <% } %>
+        </div>
+    </section>
+
+    <!-- Аутсорсинг -->
+
+    <% var mark = [
+        {
+            col: 'col-6',
+            text: 'Обеспечим физическое нанесение маркировки <br class="display-md-none">до прибытия товара в РФ'
+        },
+        {
+            col: 'col-6',
+            text: 'Проконтролируем правильность нанесения маркировки <br class="display-md-none">на складе поставщика'
+        },
+        {
+            col: 'col-6',
+            text: 'Обеспечим правильность оформления документов'
+        },
+        {
+            col: 'col-6',
+            text: 'Разработаем формы передачи данных между <br class="display-md-none">всеми контрагентами'
+        },
+        {
+            col: 'col-12',
+            text: 'Автоматизируем выгрузку и передачу данных в «Честный знак» и «ЕГАИС»'
+        },
+    ] %>
+
+    <section class="outsourcing container overflow-hidden pb-0">
+        <h1 class="font-alt text text--center text-40 text-tb-32 text-md-28 text-clip-gold bold-8 interval-3 mb-10 mb-md-5 anim anim--up -elem-">Закажите автоматизацию маркировки</h1>
+        <div class="outsourcing__items grid gap-4 mb-10 mb-md-5">
+            <% for (var i = 0; i < mark.length; i++) { %>
+                <div class="outsourcing__item <%= mark[i].col %> col-lg-12 relative radius-2 overflow-hidden p-4 anim anim--right -elem-">
+                    <div class="flex align-items-center gap-5 gap-md-2 relative z-1 height-100">
+                        <div class="outsourcing__pic flex align-items-center justify-content-center bg-white color-primary text-24 radius-max">
+                            <svg class="icon">
+                                <use xlink:href="img/icons.svg#check" />
+                            </svg>
+                        </div>
+                        <p class="outsourcing__text text-16 text-md-14 bold-6 interval-4"><%= mark[i].text %></p>
+                    </div>
+                </div>
+            <% } %>
+        </div>
+        <button class="btn btn--second btn--fill radius-2 py-3 px-8 mx-auto mb-10 anim anim--right -elem- -waved-" data-fancybox-modal data-type="ajax" data-src="dialogs/dialog-feedback.html">Оставить заявку</button>
+        <div class="gift relative radius-6 box-shadow py-8 px-10 py-md-5 px-md-4 anim anim--up -elem-">
+            <div class="gift__bg absolute radius-6 width-100 height-100 overflow-hidden">
+                <div class="gift__line line line--1"></div>
+                <div class="gift__line line line--2"></div>
+                <div class="gift__line line line--3"></div>
+                <div class="gift__line line line--4"></div>
+                <div class="gift__line line line--5"></div>
+            </div>
+            <div class="gift__content relative">
+                <p class="text text--center text-18 text-md-16 bold-6 color-white interval-4 mb-8 mb-md-5">
+                    Заполни форму заявки и получи ПОДАРКИ: Запись аудиогостинной «Цифровой контроль коснётся всех, <br class="display-lg-none">
+                    но что нужно знать именно Вашему бизнесу?»
+                </p>
+                <div class="player flex flex-direction-column align-items-center justify-content-center radius-6 p-3 p-lg-0 mb-6 mb-md-4 anim anim--up -elem- -player-" id="player">
+                    <p class="font-alt text text--center text-15 color-white bold-6 fade-80 mb-4">Аудиогостинная</p>
+                    <audio class="display-none -player-audio-" src="https://cdn1.shadam.net/uploads/files/2018-09/1536003683_system-of-a-down-lonely-day.mp3"></audio>
+                    <div class="player__block flex align-items-center justify-content-between gap-4 bg-white radius-6 width-100 max-width-100 py-2 px-5 py-lg-5">
+                        <button class="player__status btn btn--second btn--light text-24 p-1 radius-max -player-status-">
+                            <svg class="icon">
+                                <use xlink:href="img/icons.svg#play" />
+                            </svg>
+                        </button>
+                        <div class="player__progress relative bg-gray radius-7 width-100 cursor pb-1 -player-progress-">
+                            <div class="player__range absolute bg-second radius-7 height-100 -player-range-"></div>
+                        </div>
+                        <div class="player__time flex align-items-center gap-1 text-14 bold-4 width-100">
+                            <span class="-player-start-">00:00</span>/<span class="-player-end-">00:00</span>
+                        </div>
+                        <button class="player__volume btn radius-max p-1 -player-volume-">
+                            <span class="text-18 color-black fade-60">
+                                <svg class="icon">
+                                    <use xlink:href="img/icons.svg#volume-up" />
+                                </svg>
+                            </span>
+                        </button>
+                    </div>
+                </div>
+                <div class="gift__items grid gap-7 gap-md-4">
+                    <a class="gift__item col-4 col-lg-6 col-tb-12 relative bg-white radius-6 overflow-hidden p-4 anim anim--up -elem- -waved-" href="https://www.youtube.com/watch?app=desktop&v=DUW8-97PlzM" data-fancybox-modal>
+                        <div class="gift__block flex flex-direction-column align-items-center justify-content-center radius-6 height-100 py-4 px-1">
+                            <div class="gift__image relative radius-6 width-100 mb-3">
+                                <div class="pic pic--segment radius-6">
+                                    <div class="loader">
+                                        <svg class="icon">
+                                            <use xlink:href="img/icons.svg#loader" />
+                                        </svg>
+                                    </div>
+                                    <picture>
+                                        <source srcset="img/pictures/gift-5.webp" type="image/webp">
+                                        <img class="pic__img" src="img/pictures/gift-5.jpg" alt="" loading="lazy">
+                                    </picture>
+                                </div>
+                            </div>
+                            <b class="text text--center text--uppercase text-18 bold-6 interval-1 mb-2">ВИДЕО:</b>
+                            <p class="text text--center text-16 bold-4 interval-1">«Маркировка и цифровая прослеживаемость»</p>
+                        </div>
+                        <div class="gift__nameplate flex align-items-center justify-content-center font-alt text text--center text--uppercase text-20 absolute interval-1 bold-8 color-white px-5" style="background: var(--bg-green);">ПОДАРОК</div>
+                    </a>
+                    <a class="gift__item col-4 col-lg-6 col-tb-12 relative bg-white radius-6 overflow-hidden p-4 delay-2 anim anim--up -elem- -waved-" href="javascript: ;">
+                        <div class="gift__block flex flex-direction-column align-items-center justify-content-center radius-6 height-100 py-4 px-1">
+                            <div class="gift__image relative radius-6 width-100 mb-3">
+                                <div class="pic pic--segment radius-6">
+                                    <div class="gift__close flex align-items-center justify-content-center absolute text-34 color-white width-100 height-100">
+                                        <svg class="icon">
+                                            <use xlink:href="img/icons.svg#close" />
+                                        </svg>
+                                    </div>
+                                </div>
+                                <div class="gift__info flex align-items-center justify-content-center text text--center absolute mx-auto text-14 radius-6 width-max py-2 px-5">Скоро получите</div>
+                            </div>
+                            <b class="text text--center text--uppercase text-18 bold-6 interval-1 mb-2">ВИДЕО:</b>
+                            <p class="text text--center text-16 bold-4 interval-1">«Аквариум – современные китайские реалии»</p>
+                        </div>
+                        <div class="gift__nameplate flex align-items-center justify-content-center font-alt text text--center text--uppercase text-20 absolute interval-1 bold-8 color-white px-5" style="background: var(--bg-red);">СКОРО</div>
+                    </a>
+                    <a class="gift__item col-4 col-lg-6 col-tb-12 relative bg-white radius-6 overflow-hidden p-4 delay-4 anim anim--up -elem- -waved-" href="javascript: ;">
+                        <div class="gift__block flex flex-direction-column align-items-center justify-content-center radius-6 height-100 py-4 px-1">
+                            <div class="gift__image relative radius-6 width-100 mb-3">
+                                <div class="pic pic--segment radius-6">
+                                    <div class="gift__close flex align-items-center justify-content-center absolute text-34 color-white width-100 height-100">
+                                        <svg class="icon">
+                                            <use xlink:href="img/icons.svg#close" />
+                                        </svg>
+                                    </div>
+                                </div>
+                                <div class="gift__info flex align-items-center justify-content-center text text--center absolute mx-auto text-14 radius-6 width-max py-2 px-5">Скоро получите</div>
+                            </div>
+                            <b class="text text--center text--uppercase text-18 bold-6 interval-1 mb-2">ВИДЕО:</b>
+                            <p class="text text--center text-16 bold-4 interval-1">«Угрозы и риски нелегального бизнеса. Какова цена ошибки?»</p>
+                        </div>
+                        <div class="gift__nameplate flex align-items-center justify-content-center font-alt text text--center text--uppercase text-20 absolute interval-1 bold-8 color-white px-5" style="background: var(--bg-yellow);">СКОРО</div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Компания -->
+
+    <% var company = [
+        {
+            icon: 'case',
+            title: 'Более 20 лет опыта в ВЭД',
+            text: 'Опыт работы в тех регионах, с которых началась цифровизация, участие в разработке алгоритмов контроля'
+        },
+        {
+            icon: 'clients',
+            title: 'Более 130 довольных клиентов',
+            text: 'Не все клиенты готовы раскрывать свои персональные данные, но все готовы обращаться за повторными консультациями в случае необходимости'
+        },
+        {
+            icon: 'flag',
+            title: 'Более 7 лет, проведённых в Китае',
+            text: 'Всё это разной продолжительности командировки, деловые поездки, переговоры, стажировки, инспекции, аудит'
+        },
+        {
+            icon: 'in-yan',
+            title: 'Мы с Китаем говорим на одном языке',
+            text: 'Это не только свободное владение китайским языком, но также современные стратегии управления и новейшие технологии менеджмента от самого развитого в мире рынка'
+        },
+        {
+            icon: 'home',
+            title: 'Более 20 предприятий, перешедших на белый импорт',
+            text: 'Да-да, оформлять документы и платить налоги может быть выгодно!'
+        },
+        {
+            icon: 'category',
+            title: 'Работаем со всеми категориями товаров',
+            text: 'Вы получаете только стратегические решения! Собственность на товар, торговые марки и прибыль от бизнеса всегда остается у Вас!'
+        }
+    ] %>
+
+    <section class="company container overflow-hidden pb-0">
+        <h1 class="font-alt text text--center text-40 text-tb-32 text-md-28 bold-8 interval-3 mb-10 mb-md-5 anim anim--up -elem-">Почему мы?</h1>
+        <div class="company__items grid gap-5 mb-8 mb-md-5">
+            <% for (var i = 0; i < company.length; i++) { %>
+                <div class="company__item col-4 col-lg-6 col-md-12 relative bg-white radius-6 box-shadow overflow-hidden duration-6 anim anim--increase -elem-">
+                    <div class="flex flex-direction-column relative z-1 height-100 py-10 px-8 py-tb-5 px-tb-3">
+                        <img class="icon text-48 mb-8" src="img/pictures/<%= company[i].icon %>.svg" alt="">
+                        <h2 class="font-alt text-20 text-tb-18 bold-8 interval-3 mt-8 mt-tb-0 mb-4"><%= company[i].title %>.</h2>
+                        <p class="text-18 text-tb-14 bold-4 interval-2 fade-70"><%= company[i].text %>.</p>
+                    </div>
+                </div>
+            <% } %>
+        </div>
+        <a class="company__video display-block pic pic--segment radius-6 anim anim--fade -elem-" href="https://www.youtube.com/watch?v=vv3sAnGtDVo" data-fancybox-modal>
+            <div class="loader">
+                <svg class="icon">
+                    <use xlink:href="img/icons.svg#loader" />
+                </svg>
+            </div>
+            <picture>
+                <source srcset="img/pictures/yt.webp" type="image/webp">
+                <img class="pic__img pic__img--rise" src="img/pictures/yt.jpg" alt="" loading="lazy">
+            </picture>
+            <div class="company__youtobe flex align-items-center justify-content-center absolute width-100 height-100">
+                <img class="company__img" src="img/pictures/Youtube.svg" alt="">
+            </div>
+        </a>
+    </section>
+
+    <!-- Образование -->
+
+    <section class="education container overflow-hidden pb-0">
+        <h1 class="font-alt text text--center text-40 text-tb-32 text-md-28 bold-8 interval-3 mb-10 mb-md-5 anim anim--up -elem-">Образование</h1>
+        <div class="education-slider relative anim anim--left -elem-">
+            <div class="swiper">
+                <div class="swiper-wrapper">
+                    <% for (var i = 0; i < 4; i++) { %>
+                        <a class="education-slider__slide swiper-slide radius-6 p-8 p-tb-4 p-md-2" href="img/pictures/anons-<%= i %>.jpeg" data-fancybox="certificate">
+                            <div class="pic pic--rect-y box-shadow radius-2 height-100">
+                                <div class="loader">
+                                    <svg class="icon">
+                                        <use xlink:href="img/icons.svg#loader" />
+                                    </svg>
+                                </div>
+                                <picture>
+                                    <source srcset="img/pictures/certificate-<%= i %>.webp" type="image/webp">
+                                    <img class="pic__img" src="img/pictures/certificate-<%= i %>.jpg" alt="" loading="lazy">
+                                </picture>
+                            </div>
+                        </a>
+                    <% } %>
+                </div>
+            </div>
+            <div class="swiper-pagination gap-4 gap-md-1 color-primary mt-10 mt-md-5"></div>
+            <button class="swiper-button-prev btn btn--white btn--fill display-md-none radius-max -waved-">
+                <svg class="icon">
+                    <use xlink:href="img/icons.svg#arrow-left" />
+                </svg>
+            </button>
+            <button class="swiper-button-next btn btn--white btn--fill display-md-none radius-max -waved-">
+                <svg class="icon">
+                    <use xlink:href="img/icons.svg#arrow-right" />
+                </svg>
+            </button>
+        </div>
+    </section>
+
+    <!-- Статьи -->
+
+    <% var articles = [
+        {
+            img: '1',
+            title: 'Комплексный подход к процессу сертификации и таможенного оформления',
+            text: 'Для всех ли импортных товаров требуется сертификация?'
+        },
+        {
+            img: '2',
+            title: 'Импорт оборудования, не имеющего аналогов в РФ',
+            text: 'Как импортировать товары с нулевой ставкой пошлин и НДС 0%'
+        },
+        {
+            img: '3',
+            title: 'Скрытые ресурсы импортируемых товаров',
+            text: 'Как пользоваться тарифными преференциями при доставке бьюти-товаров'
+        },
+        {
+            img: '1',
+            title: 'Комплексный подход к процессу сертификации и таможенного оформления',
+            text: 'Для всех ли импортных товаров требуется сертификация?'
+        },
+        {
+            img: '2',
+            title: 'Импорт оборудования, не имеющего аналогов в РФ',
+            text: 'Как импортировать товары с нулевой ставкой пошлин и НДС 0%'
+        },
+        {
+            img: '3',
+            title: 'Скрытые ресурсы импортируемых товаров',
+            text: 'Как пользоваться тарифными преференциями при доставке бьюти-товаров'
+        }
+    ] %>
+
+    <section class="articles container overflow-hidden pb-0" id="articles">
+        <h1 class="font-alt text text--center text-40 text-tb-32 text-md-28 bold-8 interval-3 mb-10 mb-md-5 anim anim--up -elem-">Полезные статьи</h1>
+        <div class="articles-slider relative anim anim--left -elem-">
+            <div class="swiper">
+                <div class="swiper-wrapper">
+                    <% for (var i = 0; i < articles.length; i++) { %>
+                        <a class="swiper-slide height-auto -waved-" href="javascript: ;">
+                            <article class="articles-slider__slide card bg-gray radius-6 height-100 -waved-">
+                                <div class="pic pic--segment width-100">
+                                    <div class="loader">
+                                        <svg class="icon">
+                                            <use xlink:href="img/icons.svg#loader" />
+                                        </svg>
+                                    </div>
+                                    <picture>
+                                        <source srcset="img/pictures/article-<%= articles[i].img %>.webp" type="image/webp">
+                                        <img class="pic__img pic__img--rise" src="img/pictures/article-<%= articles[i].img %>.jpg" alt="" loading="lazy">
+                                    </picture>
+                                </div>
+                                <div class="card-content flex-direction-column align-items-start py-5 px-8 py-md-3 px-md-3">
+                                    <h2 class="font-alt text-20 text-md-16 bold-8 interval-3 mb-4"><%= articles[i].title %></h2>
+                                    <p class="text-18 text-md-14 bold-4 fade-70 mb-5 mb-md-3"><%= articles[i].text %></p>
+                                    <button class="btn btn--second btn--fill radius-2 py-3 px-8 mt-auto -waved-">Читать статью</button>
+                                </div>
+                            </article>
+                        </a>
+                    <% } %>
+                </div>
+            </div>
+            <div class="swiper-pagination gap-4 gap-md-1 color-primary mt-10 mt-md-5"></div>
+            <button class="swiper-button-prev btn btn--white btn--fill display-md-none radius-max -waved-">
+                <svg class="icon">
+                    <use xlink:href="img/icons.svg#arrow-left" />
+                </svg>
+            </button>
+            <button class="swiper-button-next btn btn--white btn--fill display-md-none radius-max -waved-">
+                <svg class="icon">
+                    <use xlink:href="img/icons.svg#arrow-right" />
+                </svg>
+            </button>
+        </div>
+    </section>
+
+    <!-- Отзывы -->
+
+    <% var reviews = [
+        {
+            name: 'Владимир',
+            text: 'Благодаря Катерине я наладил свой бизнес и вышел на большие прибыли. Консалтинговые услуги заключаются в консультировании производителей, продавцов и покупателей по широкому спектру экономических, финансовых и юридических вопросов, касающихся внешнеэкономических связей, регистрации участника ВЭД, анализа и прогнозирования рынка товаров и услуг, инноваций.'
+        },
+        {
+            name: 'Иван',
+            text: 'Не представляю, чтобы вообще были специалисты лучше, чем Катерина. Для успешного ведения внешнеэкономической деятельности необходимо всегда иметь свежую достоверную информацию в вопросах, связанных с таможенными услугами. Консалтинг ВЭД – это грамотные и актуальные консультации профессиональных юристов.'
+        },
+        {
+            name: 'Владимир',
+            text: 'Благодаря Катерине я наладил свой бизнес и вышел на большие прибыли. Консалтинговые услуги заключаются в консультировании производителей, продавцов и покупателей по широкому спектру экономических, финансовых и юридических вопросов, касающихся внешнеэкономических связей, регистрации участника ВЭД, анализа и прогнозирования рынка товаров и услуг, инноваций.'
+        },
+        {
+            name: 'Иван',
+            text: 'Не представляю, чтобы вообще были специалисты лучше, чем Катерина. Для успешного ведения внешнеэкономической деятельности необходимо всегда иметь свежую достоверную информацию в вопросах, связанных с таможенными услугами. Консалтинг ВЭД – это грамотные и актуальные консультации профессиональных юристов.'
+        },
+        {
+            name: 'Владимир',
+            text: 'Благодаря Катерине я наладил свой бизнес и вышел на большие прибыли. Консалтинговые услуги заключаются в консультировании производителей, продавцов и покупателей по широкому спектру экономических, финансовых и юридических вопросов, касающихся внешнеэкономических связей, регистрации участника ВЭД, анализа и прогнозирования рынка товаров и услуг, инноваций.'
+        },
+        {
+            name: 'Иван',
+            text: 'Не представляю, чтобы вообще были специалисты лучше, чем Катерина. Для успешного ведения внешнеэкономической деятельности необходимо всегда иметь свежую достоверную информацию в вопросах, связанных с таможенными услугами. Консалтинг ВЭД – это грамотные и актуальные консультации профессиональных юристов.'
+        }
+    ] %>
+
+    <section class="reviews container overflow-hidden" id="reviews">
+        <h1 class="font-alt text text--center text-40 text-tb-32 text-md-28 bold-8 interval-3 mb-10 mb-md-5 anim anim--up -elem-">Полезные статьи</h1>
+        <div class="reviews-slider relative anim anim--left -elem-">
+            <div class="swiper">
+                <div class="swiper-wrapper">
+                    <% for (var i = 0; i < reviews.length; i++) { %>
+                        <div class="swiper-slide height-auto">
+                            <div class="flex flex-direction-column bg-white box-shadow radius-6 height-100 p-8 p-md-5">
+                                <div class="flex align-items-center mb-5 mb-md-3">
+                                    <div class="reviews__pic pic pic--square radius-max mr-4">
+                                        <picture>
+                                            <source srcset="img/pictures/client.webp" type="image/webp">
+                                            <img class="pic__img" src="img/pictures/client.png" alt="" loading="lazy">
+                                        </picture>
+                                    </div>
+                                    <div class="flex flex-direction-column">
+                                        <div class="text-18 bold-7 mb-1"><%= reviews[i].name %></div>
+                                        <div class="flex align-items-center gap-1">
+                                            <% for (var j = 0; j < 5; j++) { %>
+                                                <img class="icon text-16" src="img/pictures/star.svg" alt="">
+                                            <% } %>
+                                        </div>
+                                    </div>
+                                </div>
+                                <p class="text-16 text-md-14 bold-4 interval-4 fade-80"><%= reviews[i].text %></p>
+                            </div>
+                        </div>
+                    <% } %>
+                </div>
+            </div>
+            <div class="swiper-pagination gap-4 gap-md-1 color-primary mt-10 mt-md-5"></div>
+            <button class="swiper-button-prev btn btn--white btn--fill display-md-none radius-max -waved-">
+                <svg class="icon">
+                    <use xlink:href="img/icons.svg#arrow-left" />
+                </svg>
+            </button>
+            <button class="swiper-button-next btn btn--white btn--fill display-md-none radius-max -waved-">
+                <svg class="icon">
+                    <use xlink:href="img/icons.svg#arrow-right" />
+                </svg>
+            </button>
+        </div>
+    </section>
+    
+    <%= _.template(require('./includes/footer.html').default)() %>

@@ -1,0 +1,99 @@
+
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta http-equiv="autor" content="Студия КИТ"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="apple-touch-icon" sizes="180x180" href="img/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="img/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="img/favicon/favicon-16x16.png">
+    <link rel="manifest" href="img/favicon/site.webmanifest">
+    <link rel="mask-icon" href="img/favicon/safari-pinned-tab.svg" color="#5bbad5">
+    <meta name="msapplication-TileColor" content="#00aba9">
+    <meta name="theme-color" content="#ffffff">
+
+    <title><%= data.title %></title>
+</head>
+<body>
+
+    <!-- Шапка документа -->
+
+    <header class="header container flex align-items-center justify-content-between gap-10 gap-md-3 fixed z-3 py-5 py-lg-0 linear duration-3 -header-">
+        <a class="logo btn width-100 p-1 radius-2" href="index.html">
+            <picture>
+                <source srcset="img/pictures/logo.webp" type="image/webp">
+                <img class="width-100" src="img/pictures/logo.png" alt="">
+            </picture>
+        </a>
+        <nav class="nav flex align-items-center justify-content-between gap-5 display-lg-none width-100 max-width-100">
+            <a class="btn btn--white text-16 bold-4 width-max radius-2 p-3 -waved-" href="#effectiveness" data-href>ВЭД на аутсорсе</a>
+            <a class="btn btn--white text-16 bold-4 width-max radius-2 p-3 -waved-" href="#provider" data-href>Найти поставщика</a>
+            <a class="btn btn--white text-16 bold-4 width-max radius-2 p-3 -waved-" href="#china" data-href>Экспорт</a>
+            <a class="btn btn--white text-16 bold-4 width-max radius-2 p-3 -waved-" href="#specialist" data-href>Маркировка</a>
+            <a class="btn btn--white text-16 bold-4 width-max radius-2 p-3 -waved-" href="#articles" data-href>Статьи</a>
+            <a class="btn btn--white text-16 bold-4 width-max radius-2 p-3 -waved-" href="#reviews" data-href>Отзывы</a>
+        </nav>
+        <a class="flex align-items-center display-md-none min-width-max" href="tel: +7 (903) 904-29-18">
+            <span class="text-24 color-second mr-2">
+                <svg class="icon">
+                    <use xlink:href="img/icons.svg#phone" />
+                </svg>
+            </span>
+            <span class="font-alt link link--underline text-16 bold-8 color-white">+7 (903) 904-29-18</span>
+        </a>
+        <button class="burger btn btn--second btn--light text-44 display-none display-lg-flex radius-2 -waved- -burger-">
+            <svg class="icon">
+                <use xlink:href="img/icons.svg#burger" />
+            </svg>
+        </button>
+    </header>
+
+    <!-- Мобильное меню -->
+
+    <section class="mobile flex flex-direction-column fixed z-4 overflow-auto width-100 ease duration-3" data-mobile>
+        <header class="mobile__head flex align-items-center justify-content-between bg-black relative py-3 px-4 ease duration-5 delay-3">
+            <a class="logo btn mr-5" href="index.html">
+                <picture>
+                    <source srcset="img/pictures/logo.webp" type="image/webp">
+                    <img class="width-100" src="img/pictures/logo.png" alt="">
+                </picture>
+            </a>
+            <span class="text-32 color-grey cursor -close-">
+                <svg class="icon">
+                    <use xlink:href="img/icons.svg#x" />
+                </svg>
+            </span>
+        </header>
+        <nav class="mobile__nav flex flex-direction-column relative width-max gap-5 py-8 p-4 ease duration-9 delay-5">
+            <a class="link text-20 color-grey width-max -mobile-link-" href="#effectiveness" data-href>ВЭД на аутсорсе</a>
+            <a class="link text-20 color-grey width-max -mobile-link-" href="#provider" data-href>Найти поставщика</a>
+            <a class="link text-20 color-grey width-max -mobile-link-" href="#china" data-href>Экспорт</a>
+            <a class="link text-20 color-grey width-max -mobile-link-" href="#specialist" data-href>Маркировка</a>
+            <a class="link text-20 color-grey width-max -mobile-link-" href="#articles" data-href>Статьи</a>
+            <a class="link text-20 color-grey width-max -mobile-link-" href="#reviews" data-href>Отзывы</a>
+        </nav>
+        <footer class="mobile__footer relative mt-auto pb-10 px-4 ease duration-5 delay-9">
+            <div class="flex align-items-center justify-content-center gap-4">
+                <a class="mobile__btn btn btn--second btn--light text-24 radius-max" href="tel: +7 (903) 904-29-18">
+                    <svg class="icon">
+                        <use xlink:href="img/icons.svg#phone" />
+                    </svg>
+                </a>
+                <a class="mobile__btn btn btn--second btn--light text-24 radius-max" href="mailto: KaterinaBalashova@info.ru">
+                    <svg class="icon">
+                        <use xlink:href="img/icons.svg#mail" />
+                    </svg>
+                </a>
+                <a class="mobile__btn btn btn--second btn--light text-24 radius-max" href="mailto: KaterinaBalashova@info.ru">
+                    <img class="icon" src="img/pictures/tg.svg" alt="">
+                </a>
+            </div>
+        </footer>
+    </section>
+
+    <!-- Перетаскиваемая кнопка на мобильных устройствах -->
+
+    <button class="draggable-btn btn btn--second btn--fill fixed z-3 radius-max overflow-hidden -draggable-btn-" data-fancybox-modal data-type="ajax" data-src="dialogs/dialog-feedback.html"></button>
