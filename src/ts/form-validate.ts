@@ -103,7 +103,7 @@ const formSubmit = (event: Event): void => {
     if (validateForm(form)) {
         
         const formData: FormData = new FormData(form)
-        const requestUrl: string = '/php/telegram-bot.php'
+        const requestUrl: string = '/submitHandler.php'
         const submitBtn = form.querySelector('button[type="submit"]') as HTMLButtonElement
 
         submitBtn.setAttribute('disabled', 'disabled')
@@ -123,7 +123,7 @@ const formSubmit = (event: Event): void => {
 
             window.Fancybox.show([{
 
-                src: '/dialogs/dialog-submit.html',
+                src: '/dialogs/dialog-submit.php',
                 type: 'ajax',
                 dragToClose: false,
                 mainClass: 'fancybox-modal'
