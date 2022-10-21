@@ -3,12 +3,16 @@ const anchorTransition = (event: Event): void => {
     event.preventDefault()
 
     const id: string = String((event.target as HTMLAnchorElement).getAttribute('href'))
+    const headerHeight: number = (document.querySelector('.-header-') as HTMLElement).clientHeight / 2
     const scrollToBlock = document.querySelector(id) as HTMLElement
 
-    scrollToBlock.scrollIntoView({
+    let elementPosition = scrollToBlock.getBoundingClientRect().top
+    let offsetPosition = elementPosition + window.pageYOffset - headerHeight
 
-        behavior: 'smooth',
-        block: 'start'
+    window.scrollTo({
+
+        top: offsetPosition,
+        behavior: 'smooth'
 
     })
 
