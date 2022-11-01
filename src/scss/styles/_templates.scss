@@ -95,55 +95,6 @@
     }
 }
 
-// Перетаскиваемая кнопка на мобильных устройствах
-.draggable-btn {
-    --size             : 160px;
-    width              : var(--size);
-    height             : var(--size);
-    bottom             : var(--size-10);
-    right              : var(--size-10);
-    transition-property: opacity, transform;
-
-    margin: {
-        top : calc(-1 * (var(--size) / 2));
-        left: calc(-1 * (var(--size) / 2));
-    }
-
-    &::before {
-        content        : '';
-        display        : block;
-        position       : static;
-        width          : 100%;
-        height         : 100%;
-        background     : url('../img/pictures/chat.svg') no-repeat center;
-        background-size: 100px;
-        border-radius  : inherit;
-        box-shadow     : inherit;
-    }
-
-    @media(max-width: $laptop) {
-        & {
-            --size: 80px;
-        }
-
-        &::before {
-            background-size: 60px;
-        }
-    }
-
-    @media(max-width: $mobile) {
-        & {
-            --size: 40px;
-            bottom: var(--size-4);
-            right : var(--size-4);
-        }
-
-        &::before {
-            background-size: 30px;
-        }
-    }
-}
-
 // Анимированные линии
 .line {
     content      : '';
@@ -283,8 +234,14 @@
 
 // Социальные сети
 .social {
-    &__content {
-        background: rgba(41, 168, 234, 0.2);
+    &__item {
+        &--tg {
+            background-color: rgba(41, 168, 234, 0.2);
+        }
+
+        &--yt {
+            background-color: rgb(241, 90, 90, 0.2);
+        }
     }
 
     &__icon {
@@ -292,8 +249,20 @@
     }
 
     @media(max-width: $laptop) {
+        &__item {
+            flex-direction : column;
+            justify-content: center;
+        }
+
         &__content {
-            align-items: flex-start;
+            text-align : center;
+            align-items: center;
+        }
+    }
+
+    @media(max-width: $mobile) {
+        &__icon {
+            font-size: 70px;
         }
     }
 }

@@ -11,7 +11,6 @@ import inputs from './ts/inputs'
 import formValidate from './ts/form-validate'
 import scrollHeader from './ts/scroll-header'
 import mobileMenu from './ts/mobile-menu'
-import draggableBtn from './ts/draggable-btn'
 import filter from './ts/filter'
 import player from './ts/player'
 
@@ -31,7 +30,6 @@ window.addEventListener('DOMContentLoaded', () => {
     formValidate.init()
     scrollHeader.init()
     mobileMenu.init()
-    draggableBtn.init()
     filter.init()
     player.init()
     
