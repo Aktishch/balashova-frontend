@@ -13,6 +13,7 @@ import scrollHeader from './ts/scroll-header'
 import mobileMenu from './ts/mobile-menu'
 import filter from './ts/filter'
 import player from './ts/player'
+import listing from './ts/listing'
 
 // Style
 import './scss/index.scss'
@@ -32,5 +33,6 @@ window.addEventListener('DOMContentLoaded', () => {
     mobileMenu.init()
     filter.init()
     player.init()
+    listing.init()
     
 })

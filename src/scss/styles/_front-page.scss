@@ -66,42 +66,40 @@
 
     @media(max-width: $tablet) {
         & {
-            padding-top  : 150px;
             border-radius: 0;
-            align-items  : flex-start;
-            min-height   : 1100px;
+            align-items  : flex-end;
+            min-height   : 1000px;
+
+            &::after {
+                content   : '';
+                position  : absolute;
+                left      : 0;
+                right     : 0;
+                bottom    : 0;
+                top       : 0;
+                width     : 100%;
+                height    : 100%;
+                z-index   : var(--z-1);
+                background: linear-gradient(180deg, var(--color-none) 35%, #01160A 70.08%);
+            }
         }
 
         &__picture {
-            max-width: none;
-            right    : 0;
+            max-width: 500px;
+            top      : 50px;
             left     : 0;
-            width    : 600px;
+            right    : 0;
             margin   : 0 auto;
         }
     }
 
     @media(max-width: $mobile) {
         & {
-            padding-top  : 300px;
-            border-radius: 0;
-            align-items  : flex-end;
-            min-height   : 100vh;
+            min-height: 700px;
         }
 
         &__picture {
-            left : -150px;
-            width: 700px;
-
-            &::after {
-                width        : 100%;
-                height       : 100%;
-                z-index      : var(--z-1);
-                background   : linear-gradient(0deg, var(--color-primary-60) 40%, rgba(0, 0, 0, 0) 90%);
-                filter       : blur(0);
-                border-radius: 0;
-                animation    : none;
-            }
+            top: 0;
         }
     }
 }
@@ -184,10 +182,6 @@
             justify-content: center;
             text-align     : center;
         }
-
-        &__item:last-child &__text {
-            text-align: center;
-        }
     }
 }
 
@@ -252,6 +246,10 @@
         right           : 0;
         bottom          : -6px;
         background-color: #F1C053;
+    }
+
+    &__btn {
+        max-width: 425px;
     }
 
     @media(max-width: $laptop) {
@@ -364,11 +362,13 @@
 
     @media(max-width: $mobile) {
         &__banner {
-            overflow: hidden;
+            overflow  : hidden;
+            min-height: 70px;
         }
 
         &__content {
             flex-direction: row;
+            min-height    : 70px;
         }
 
         &__image {

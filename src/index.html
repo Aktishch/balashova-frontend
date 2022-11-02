@@ -17,38 +17,39 @@
             <div class="line line--5"></div>
             <div class="director__picture width-100 absolute duration-5 anim anim--left -elem-">
                 <picture>
+                    <source srcset="img/pictures/director-min.png" media="(max-width: 768px)">
                     <source srcset="img/pictures/director.webp" type="image/webp">
                     <img class="width-100 relative z-1" src="img/pictures/director.png" alt="">
                 </picture>
             </div>
         </div>
-        <div class="director__content relative z-1 flex flex-direction-column relative">
-            <h2 class="font-alt text-28 text-lg-20 text-md-16 text-shadow bold-7 color-white anim anim--right -elem-">Ваш директор по ВЭД на аутсорсе</h2>
-            <h1 class="font-alt text-50 text-lg-40 text-md-28 text-shadow bold-8 color-white interval-1 mb-9 mb-lg-5 mb-md-3 delay-2 anim anim--right -elem-">Катерина Балашова</h1>
-            <div class="flex flex-direction-column gap-5 gap-md-3 mb-6 mb-md-10">
+        <div class="director__content relative z-2 flex flex-direction-column relative">
+            <h2 class="font-alt text-28 text-lg-20 text-md-16 bold-7 color-white anim anim--right -elem-">Ваш директор по ВЭД на аутсорсе</h2>
+            <h1 class="font-alt text-50 text-lg-40 text-md-28 bold-8 color-white interval-1 mb-9 mb-lg-5 delay-2 anim anim--right -elem-">Катерина Балашова</h1>
+            <div class="flex flex-direction-column gap-5 gap-md-3 mb-6">
                 <div class="flex align-items-center delay-3 anim anim--right -elem-">
-                    <img class="icon text-36 text-md-24 mr-3" src="img/pictures/nameplate-1.svg" alt="">
-                    <span class="text-shadow text-18 text-md-14 bold-4 color-white interval-4 mr-3">
+                    <img class="icon text-36 mr-3" src="img/pictures/nameplate-1.svg" alt="">
+                    <span class="text-18 text-md-14 bold-4 color-white interval-4 mr-3">
                         руководитель регионального отделения <br class="display-md-none">
                         РАСПП в Краснодарском крае
                     </span>
                 </div>
                 <div class="flex align-items-center delay-4 anim anim--right -elem-">
-                    <img class="icon text-36 text-md-24 mr-3" src="img/pictures/nameplate-2.svg" alt="">
-                    <span class="text-shadow text-18 text-md-14 bold-4 color-white interval-4 mr-3">
+                    <img class="icon text-36 mr-3" src="img/pictures/nameplate-2.svg" alt="">
+                    <span class="text-18 text-md-14 bold-4 color-white interval-4 mr-3">
                         Директор консалтингового агентства <br class="display-md-none">
                         по ВЭД | востоковед
                     </span>
                 </div>
                 <div class="flex align-items-center delay-5 anim anim--right -elem-">
-                    <img class="icon text-36 text-md-24 mr-3" src="img/pictures/nameplate-3.svg" alt="">
-                    <span class="text-shadow text-18 text-md-14 bold-4 color-white interval-4 mr-3">
+                    <img class="icon text-36 mr-3" src="img/pictures/nameplate-3.svg" alt="">
+                    <span class="text-18 text-md-14 bold-4 color-white interval-4 mr-3">
                         Председатель комитета по международному <br class="display-md-none">
                         сотрудничеству ККО "Опора России"
                     </span>
                 </div>
             </div>
-            <button class="btn btn--second btn--fill text-18 radius-2 width-max py-3 px-8 mt-6 mt-md-0 delay-6 anim anim--right -elem- -waved-" data-fancybox-modal data-type="ajax" data-src="dialogs/dialog-feedback.html">Связаться</button>
+            <button class="btn btn--second btn--fill text-18 text-md-16 radius-2 width-max py-3 px-8 mt-6 mt-md-0 delay-6 anim anim--right -elem- -waved-" data-fancybox-modal data-type="ajax" data-src="dialogs/dialog-feedback.html">Связаться</button>
         </div>
     </section>
 
@@ -133,7 +134,7 @@
                 <div class="gift__line line line--4"></div>
                 <div class="gift__line line line--5"></div>
             </div>
-            <div class="gift__content relative">
+            <div class="gift__content relative -list-">
                 <p class="text text--center text-18 text-md-16 bold-6 color-white interval-4 mb-8 mb-md-5">Заполни заявку на консультацию и получи ПОДАРКИ</p>
                 <div class="gift__items grid gap-7 gap-md-4">
                     <a class="gift__item col-4 col-lg-6 col-tb-12 relative bg-white radius-6 overflow-hidden p-4 anim anim--up -elem- -waved-" href="https://www.youtube.com/watch?app=desktop&v=SWG1oam9SG0" data-fancybox-modal>
@@ -156,7 +157,7 @@
                         </div>
                         <div class="gift__nameplate flex align-items-center justify-content-center font-alt text text--center text--uppercase text-20 absolute interval-1 bold-8 color-white px-5" style="background: var(--bg-yellow);">ПОДАРОК</div>
                     </a>
-                    <div class="gift__item col-4 col-lg-6 col-tb-12 relative bg-white radius-6 overflow-hidden cursor p-4 delay-2 anim anim--up -elem- -waved-" data-fancybox-modal data-type="ajax" data-src="dialogs/dialog-article-bicycle.html">
+                    <div class="gift__item col-4 col-lg-6 col-tb-12 display-tb-none relative bg-white radius-6 overflow-hidden cursor p-4 delay-2 anim anim--up -list-el-hid- -elem- -waved-" data-fancybox-modal data-type="ajax" data-src="dialogs/dialog-article-bicycle.html">
                         <div class="gift__block flex flex-direction-column align-items-center justify-content-center radius-6 height-100 py-4 px-1">
                             <div class="gift__image relative radius-6 width-100 mb-3">
                                 <div class="pic pic--segment radius-6">
@@ -176,7 +177,7 @@
                         </div>
                         <div class="gift__nameplate flex align-items-center justify-content-center font-alt text text--center text--uppercase text-20 absolute interval-1 bold-8 color-white px-5" style="background: var(--bg-green);">ПОДАРОК</div>
                     </div>
-                    <a class="gift__item col-4 col-lg-6 col-tb-12 relative bg-white radius-6 overflow-hidden p-4 delay-4 anim anim--up -elem- -waved-" href="javascript: ;">
+                    <a class="gift__item col-4 col-lg-6 col-tb-12 display-tb-none relative bg-white radius-6 overflow-hidden p-4 delay-4 anim anim--up -list-el-hid- -elem- -waved-" href="javascript: ;">
                         <div class="gift__block flex flex-direction-column align-items-center justify-content-center radius-6 height-100 py-4 px-1">
                             <div class="gift__image relative radius-6 width-100 mb-3">
                                 <div class="pic pic--segment radius-6">
@@ -194,6 +195,7 @@
                         <div class="gift__nameplate flex align-items-center justify-content-center font-alt text text--center text--uppercase text-20 absolute interval-1 bold-8 color-white px-5" style="background: var(--bg-red);">СКОРО</div>
                     </a>
                 </div>
+                <button class="gift__btn display-none display-tb-flex btn btn--second btn--fill radius-2 width-100 py-3 px-8 mx-auto mt-5 -list-show-">Еще 2 подарка</button>
             </div>
         </div>
     </section>
@@ -336,11 +338,11 @@
                     <div class="business__line business__line--5 line line--5"></div>
                 </div>
                 <div class="business__content flex flex-direction-column align-items-end justify-content-center relative height-100 p-10 p-tb-4">
-                    <h2 class="relative z-1 text-24 text-md-18 text-shadow bold-7 interval-4 color-white">
+                    <h2 class="relative z-1 text-24 text-md-18 bold-7 interval-4 color-white">
                         Вы занимаетесь бизнесом, <br>
                         мы занимаемся ВЭД!
                     </h2>
-                    <div class="business__image absolute width-100 width-md-auto height-md-100">
+                    <div class="business__image display-md-none absolute width-100 width-md-auto height-md-100">
                         <picture>
                             <source srcset="img/pictures/business.webp" type="image/webp">
                             <img class="width-100" src="img/pictures/business.png" alt="" loading="lazy">
