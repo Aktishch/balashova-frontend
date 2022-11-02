@@ -378,13 +378,61 @@
     }
 }
 
+// Эквалайзер
+.equalizer {
+    top   : 0;
+    left  : 0;
+    right : 0;
+    bottom: 0;
+
+    &__item {
+        width           : var(--size-2);
+        background-color: var(--color-white-50);
+
+        &--1 {
+            animation: 1.4s equalizer linear infinite 0.2s;
+        }
+
+        &--2 {
+            animation: 1.2s equalizer linear infinite;
+        }
+
+        &--3 {
+            animation: 0.8s equalizer linear infinite 0.4s;
+        }
+
+        &--4 {
+            animation: 1.6s equalizer linear infinite 0.1s;
+        }
+
+        &--5 {
+            animation: 1.5s equalizer linear infinite 0.4s;
+        }
+
+        &--6 {
+            animation: 1.3s equalizer linear infinite;
+        }
+    }
+}
+
+@keyframes equalizer {
+
+    0%,
+    100% {
+        height: var(--size-10);
+    }
+
+    50% {
+        height: var(--size-6);
+    }
+}
+
 // Плеер
 .player {
-    background-color: var(--color-white-10);
-
-    &__progress {
-        max-width: 760px;
-    }
+    top   : 0;
+    left  : 0;
+    right : 0;
+    bottom: 0;
 
     &__range {
         left  : 0;
@@ -393,8 +441,8 @@
 
         &::after {
             content         : '';
-            width           : var(--size-3);
-            height          : var(--size-3);
+            width           : var(--size-2);
+            height          : var(--size-2);
             background-color: inherit;
             border-radius   : 50%;
             position        : absolute;
@@ -407,35 +455,6 @@
 
     &__time {
         max-width: 80px;
-    }
-
-    @media(max-width: $laptop) {
-        & {
-            background-color: var(--color-none);
-        }
-    }
-
-    @media(max-width: $mobile) {
-        &__block {
-            flex-wrap: wrap;
-        }
-
-        &__progress {
-            order    : 1;
-            max-width: 100%;
-        }
-
-        &__status {
-            order: 2;
-        }
-
-        &__time {
-            order: 3;
-        }
-
-        &__volume {
-            order: 4;
-        }
     }
 }
 
