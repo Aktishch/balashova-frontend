@@ -12,7 +12,10 @@ const init = (): void => {
 
             for (let i: number = 0; i < listingItems.length; i++) {
 
-                listingItems[i].classList.remove('display-tb-none')
+
+                if (listingItems[i].classList.contains('display-tb-none')) listingItems[i].classList.remove('display-tb-none')
+                if (listingItems[i].classList.contains('-elem-')) listingItems[i].classList.add('-show-')
+
                 listingBtn.remove()
 
             }
